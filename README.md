@@ -76,12 +76,13 @@ func main() {
 1.解绑安全组 您需要在代码中引入依赖包：
 ```
 import (
-  "github.com/ctyun/ctyun_sdk_endpoint/ctecs"
+  "github.com/yangpp6/go-sdk/sdk/common"
+  "github.com/yangpp6/go-sdk/sdk/ecs"
 )
 
 ```
 
-2.初始化client对象，client对象存放endpoint信息，示例中为https://ctecs-global.ctapi.ctyun.cn
+2.初始化client对象，client对象存放endpoint信息，示例中为ctecs-global.ctapi.ctyun.cn
 
 ```
   client := &common.CtyunSender{
@@ -92,7 +93,7 @@ import (
 ```
 
 3.初始化credential， 需要使用用户的ak，sk
-   
+
 ```
   credential, _ := common.NewCredential(ak, sk)
 ```
@@ -121,6 +122,5 @@ import (
 
 ```
   jsonstr, _ := json.Marshal(response)
-	fmt.Println(string(jsonstr))
+  fmt.Println(string(jsonstr))
 ```
-  

@@ -129,7 +129,7 @@ func listFlavors(ak, sk string) {
 	})
 	if err != nil {
 		errorContent, _ := io.ReadAll(err.Response().Body)
-		fmt.Printf("错误信息为：%s", errorContent)
+		fmt.Printf("错误信息为：%s", string(errorContent))
 		return
 	}
 	jsonstr, _ := json.Marshal(response)
