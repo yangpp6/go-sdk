@@ -4,16 +4,16 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/bandwidth"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"log"
 	"net/http"
-	"openapi-sdk-go/sdk/bandwidth"
-	"openapi-sdk-go/sdk/common"
 )
 
 func bandwidthOperation(ak, sk, regionID, eipID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtVpcEndPoint: "ctvpc-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)

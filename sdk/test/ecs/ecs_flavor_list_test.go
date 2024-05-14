@@ -3,11 +3,11 @@ package test
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/ecs"
+	"github.com/yangpp6/go-sdk/sdk/test"
 	"golang.org/x/net/context"
 	"io"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/ecs"
-	"openapi-sdk-go/sdk/test"
 	"testing"
 )
 

@@ -4,16 +4,16 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/eip"
 	"log"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/eip"
 )
 
 func eipOperation(ak, sk, regionID, vmID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtVpcEndPoint: "ctvpc-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)

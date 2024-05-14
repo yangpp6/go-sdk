@@ -2,8 +2,8 @@ package region
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // RegionListApi 查询弹性IP详情

@@ -2,8 +2,8 @@ package ecs
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // ecsResetPasswordApi  更新云主机密码
@@ -27,8 +27,8 @@ func (v *ecsRedeployApi) Do(ctx context.Context, credential *common.Credential, 
 	// 构建请求
 	builder := v.WithCredential(credential)
 	_, err := builder.WriteJson(&ecsRedeployRealRequest{
-		RegionID:    req.RegionId,
-		InstanceID:  req.InstanceId,
+		RegionID:   req.RegionId,
+		InstanceID: req.InstanceId,
 	})
 	if err != nil {
 		return nil, err
@@ -52,8 +52,8 @@ func (v *ecsRedeployApi) Do(ctx context.Context, credential *common.Credential, 
 }
 
 type ecsRedeployRealRequest struct {
-	RegionID    string `json:"regionID"`
-	InstanceID  string `json:"instanceID"`
+	RegionID   string `json:"regionID"`
+	InstanceID string `json:"instanceID"`
 }
 
 type EcsRedeployRealResponse struct {

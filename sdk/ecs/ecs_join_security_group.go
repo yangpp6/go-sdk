@@ -2,8 +2,8 @@ package ecs
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // ecsJoinSecurityGroupApi  绑定安全组

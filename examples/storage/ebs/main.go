@@ -5,15 +5,15 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/ebs"
 	"net/http"
-	"terraform-provider-ctyun/sdk/common"
-	"terraform-provider-ctyun/sdk/ebs"
 )
 
 func ebsShow(ak, sk, regionID, diskID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtEbsEndPoint: "ebs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -35,7 +35,7 @@ func ebsShow(ak, sk, regionID, diskID string) {
 func ebsChangeName(ak, sk, regionID, diskID, diskName string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtEbsEndPoint: "ebs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -58,7 +58,7 @@ func ebsChangeName(ak, sk, regionID, diskID, diskName string) {
 func ebsAssociate(ak, sk, regionID, diskID, instanceID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtEbsEndPoint: "ebs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -81,7 +81,7 @@ func ebsAssociate(ak, sk, regionID, diskID, instanceID string) {
 func ebsDisassociate(ak, sk, regionID, diskID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtEbsEndPoint: "ebs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -103,7 +103,7 @@ func ebsDisassociate(ak, sk, regionID, diskID string) {
 func ebsCreate(ak, sk, clientToken, regionID, azName string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtEbsEndPoint: "ebs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -131,7 +131,7 @@ func ebsCreate(ak, sk, clientToken, regionID, azName string) {
 func ebsChangeSize(ak, sk, clientToken, regionID, diskID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtEbsEndPoint: "ebs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	createHandler := ebs.NewEbsChangeSizeApi(client)
@@ -152,7 +152,7 @@ func ebsChangeSize(ak, sk, clientToken, regionID, diskID string) {
 func ebsDelete(ak, sk, clientToken, regionID, diskID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtEbsEndPoint: "ebs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	createHandler := ebs.NewEbsDeleteApi(client)

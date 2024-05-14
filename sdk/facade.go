@@ -1,22 +1,22 @@
 package sdk
 
 import (
-	"openapi-sdk-go/sdk/bandwidth"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/ebs"
-	"openapi-sdk-go/sdk/ecs"
-	"openapi-sdk-go/sdk/eip"
-	"openapi-sdk-go/sdk/idp"
-	"openapi-sdk-go/sdk/image"
-	"openapi-sdk-go/sdk/job"
-	"openapi-sdk-go/sdk/keypair"
-	"openapi-sdk-go/sdk/order"
-	"openapi-sdk-go/sdk/region"
-	"openapi-sdk-go/sdk/security_group"
-	"openapi-sdk-go/sdk/security_group_rule"
-	"openapi-sdk-go/sdk/subnet"
-	"openapi-sdk-go/sdk/user"
-	"openapi-sdk-go/sdk/vpc"
+	"github.com/yangpp6/go-sdk/sdk/bandwidth"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/ebs"
+	"github.com/yangpp6/go-sdk/sdk/ecs"
+	"github.com/yangpp6/go-sdk/sdk/eip"
+	"github.com/yangpp6/go-sdk/sdk/idp"
+	"github.com/yangpp6/go-sdk/sdk/image"
+	"github.com/yangpp6/go-sdk/sdk/job"
+	"github.com/yangpp6/go-sdk/sdk/keypair"
+	"github.com/yangpp6/go-sdk/sdk/order"
+	"github.com/yangpp6/go-sdk/sdk/region"
+	"github.com/yangpp6/go-sdk/sdk/security_group"
+	"github.com/yangpp6/go-sdk/sdk/security_group_rule"
+	"github.com/yangpp6/go-sdk/sdk/subnet"
+	"github.com/yangpp6/go-sdk/sdk/user"
+	"github.com/yangpp6/go-sdk/sdk/vpc"
 )
 
 // Apis api的接口
@@ -105,7 +105,7 @@ type Apis struct {
 	EcsStopInstanceApi                common.ApiHandler[ecs.EcsStopInstanceRequest, ecs.EcsStopInstanceResponse]
 	EcsInstanceStatusListApi          common.ApiHandler[ecs.EcsInstanceStatusListRequest, ecs.EcsInstanceStatusListResponse]
 	EcsResetPasswordApi               common.ApiHandler[ecs.EcsResetPasswordRequest, ecs.EcsResetPasswordResponse]
-	EcsRedeployApi                   common.ApiHandler[ecs.EcsRedeployRequest, ecs.EcsRedeployResponse]
+	EcsRedeployApi                    common.ApiHandler[ecs.EcsRedeployRequest, ecs.EcsRedeployResponse]
 }
 
 // NewApis 注册钩子

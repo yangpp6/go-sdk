@@ -2,8 +2,8 @@ package vpc
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // vpcUpdateApi 创建vpc

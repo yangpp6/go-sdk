@@ -3,17 +3,18 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"flag"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/ecs"
 	"io"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/ecs"
 )
 
 func createInstance(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -82,7 +83,7 @@ func createInstance(ak, sk string) {
 func describeInstances(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -111,7 +112,7 @@ func describeInstances(ak, sk string) {
 func listFlavors(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsFlavorListApi(client)
@@ -128,7 +129,7 @@ func listFlavors(ak, sk string) {
 	})
 	if err != nil {
 		errorContent, _ := io.ReadAll(err.Response().Body)
-		fmt.Printf("错误信息为：%s", string(errorContent))
+		fmt.Printf("错误信息为：%s", errorContent)
 		return
 	}
 	jsonstr, _ := json.Marshal(response)
@@ -138,7 +139,7 @@ func listFlavors(ak, sk string) {
 func instanceDetail(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsInstanceDetailsApi(client)
@@ -159,7 +160,7 @@ func instanceDetail(ak, sk string) {
 func instanceJoinSecurityGroup(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 
@@ -184,7 +185,7 @@ func instanceJoinSecurityGroup(ak, sk string) {
 func instanceLeaveSecurityGroup(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsLeaveSecurityGroupApi(client)
@@ -206,7 +207,7 @@ func instanceLeaveSecurityGroup(ak, sk string) {
 func instanceQueryAsyncResult(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsQueryAsyncResultApi(client)
@@ -226,7 +227,7 @@ func instanceQueryAsyncResult(ak, sk string) {
 func resetInstancePassword(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsResetPasswordApi(client)
@@ -247,7 +248,7 @@ func resetInstancePassword(ak, sk string) {
 func startInstance(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsStartInstanceApi(client)
@@ -267,7 +268,7 @@ func startInstance(ak, sk string) {
 func stopInstance(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsStopInstanceApi(client)
@@ -287,7 +288,7 @@ func stopInstance(ak, sk string) {
 func UnsubscribeInstance(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsUnsubscribeInstanceApi(client)
@@ -307,7 +308,7 @@ func UnsubscribeInstance(ak, sk string) {
 func UpdateFlavorSpec(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsUpdateFlavorSpecApi(client)
@@ -329,7 +330,7 @@ func UpdateFlavorSpec(ak, sk string) {
 func listInstanceVolumes(ak, sk string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsVolumeListApi(client)
@@ -349,24 +350,24 @@ func listInstanceVolumes(ak, sk string) {
 }
 
 func main() {
-	//var ak = "184fc5f6be184d3794e00e81fe202e4c"
-	//var sk = "7d8c1186994147d9bc3352f967f8ca1a"
+	var ak = "184fc5f6be184d3794e00e81fe202e4c"
+	var sk = "7d8c1186994147d9bc3352f967f8ca1a"
 
-	//flag.StringVar(&ak, "ak", "", "access key")
-	//flag.StringVar(&sk, "sk", "", "secret key")
-	//flag.Parse()
+	flag.StringVar(&ak, "ak", "", "access key")
+	flag.StringVar(&sk, "sk", "", "secret key")
+	flag.Parse()
 
-	listFlavors("184fc5f6be184d3794e00e81fe202e4c", "7d8c1186994147d9bc3352f967f8ca1a")
-	//createInstance(ak, sk)
-	//describeInstances(ak, sk)
-	//instanceDetail(ak, sk)
-	//instanceJoinSecurityGroup(ak, sk)
-	//instanceLeaveSecurityGroup(ak, sk)
-	//instanceQueryAsyncResult(ak, sk)
-	//resetInstancePassword(ak, sk)
-	//startInstance(ak, sk)
-	//stopInstance(ak, sk)
-	//UnsubscribeInstance(ak, sk)
-	//UpdateFlavorSpec(ak, sk)
-	//listInstanceVolumes(ak, sk)
+	listFlavors(ak, sk)
+	createInstance(ak, sk)
+	describeInstances(ak, sk)
+	instanceDetail(ak, sk)
+	instanceJoinSecurityGroup(ak, sk)
+	instanceLeaveSecurityGroup(ak, sk)
+	instanceQueryAsyncResult(ak, sk)
+	resetInstancePassword(ak, sk)
+	startInstance(ak, sk)
+	stopInstance(ak, sk)
+	UnsubscribeInstance(ak, sk)
+	UpdateFlavorSpec(ak, sk)
+	listInstanceVolumes(ak, sk)
 }

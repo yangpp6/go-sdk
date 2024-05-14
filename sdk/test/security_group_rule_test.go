@@ -3,7 +3,7 @@ package test
 import (
 	"context"
 	"github.com/google/uuid"
-	"openapi-sdk-go/sdk/security_group_rule"
+	"github.com/yangpp6/go-sdk/sdk/security_group_rule"
 	"testing"
 )
 

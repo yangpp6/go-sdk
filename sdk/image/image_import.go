@@ -2,8 +2,8 @@ package image
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // imageImportApi 查询镜像

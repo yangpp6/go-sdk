@@ -7,16 +7,15 @@
 
 ## 发布地址
 
-https://github.com/yangpp6/sdk-go
+https://github.com/yangpp6/go-sdk
 
 ## 源码仓库地址
 
-https://github.com/yangpp6/sdk-go
-
+https://github.com/yangpp6/go-sdk
 ## 安装方式
 
 ```
-go get github.com/yangpp6/sdk-go
+go get github.com/yangpp6/go-sdk
 ```
 
 ## 示例说明
@@ -36,13 +35,13 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/ecs")
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/ecs")
 
 func instanceLeaveSecurityGroup(ak, sk string) {
   NewEcsLeaveSecurityGroupApi	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 	credential, _ := common.NewCredential(ak, sk)
 	handler := ecs.NewEcsLeaveSecurityGroupApi(client)
@@ -87,7 +86,7 @@ import (
 ```
   client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
   handler := ecs.NewEcsLeaveSecurityGroupApi(client)
 ```

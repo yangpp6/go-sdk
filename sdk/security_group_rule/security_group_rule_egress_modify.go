@@ -2,8 +2,8 @@ package security_group_rule
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // securityGroupRuleEgressModifyApi 修改安全组出向规则

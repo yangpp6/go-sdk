@@ -1,4 +1,4 @@
-module github.com/yangpp6/sdk-go
+module github.com/yangpp6/go-sdk
 
 go 1.18
 

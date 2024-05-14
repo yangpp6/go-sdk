@@ -2,8 +2,8 @@ package ecs
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // ecsInstanceStatusListApi  获取多台云主机状态

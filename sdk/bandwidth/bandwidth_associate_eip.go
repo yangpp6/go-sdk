@@ -2,8 +2,8 @@ package bandwidth
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // bandwidthAssociationEipApi 绑定弹性IP

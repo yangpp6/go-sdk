@@ -2,8 +2,8 @@ package ecs
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // ecsFlavorListApi  查询一个或多个云主机规格资源

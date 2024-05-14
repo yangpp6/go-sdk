@@ -2,8 +2,8 @@ package ebs
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // ebsCreateApi 云硬盘修改名称

@@ -2,8 +2,8 @@ package keypair
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // keypairDetailsApi 创建一对SSH密钥对

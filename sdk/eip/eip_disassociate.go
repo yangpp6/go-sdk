@@ -2,8 +2,8 @@ package eip
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // eipDisassociateApi 解绑弹性IP

@@ -5,15 +5,15 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/image"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/image"
 )
 
 func imageDetail(ak, sk, regionID, imageID string) {
 	client := &common.CtyunSender{
 		Client:          &http.Client{},
-		CtImageEndPoint: "https://ctimage-global.ctapi.ctyun.cn",
+		CtImageEndPoint: "ctimage-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -35,7 +35,7 @@ func imageDetail(ak, sk, regionID, imageID string) {
 func imageDelete(ak, sk, regionID, imageID string) {
 	client := &common.CtyunSender{
 		Client:          &http.Client{},
-		CtImageEndPoint: "https://ctimage-global.ctapi.ctyun.cn",
+		CtImageEndPoint: "ctimage-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -57,7 +57,7 @@ func imageDelete(ak, sk, regionID, imageID string) {
 func imageList(ak, sk, regionID, azName string) {
 	client := &common.CtyunSender{
 		Client:          &http.Client{},
-		CtImageEndPoint: "https://ctimage-global.ctapi.ctyun.cn",
+		CtImageEndPoint: "ctimage-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -82,7 +82,7 @@ func imageList(ak, sk, regionID, azName string) {
 func imageUpdate(ak string, sk string, regionID string, imageID string, imageName string, maximumRam int, minimumRam int) {
 	client := &common.CtyunSender{
 		Client:          &http.Client{},
-		CtImageEndPoint: "https://ctimage-global.ctapi.ctyun.cn",
+		CtImageEndPoint: "ctimage-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)

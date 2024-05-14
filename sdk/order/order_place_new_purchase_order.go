@@ -3,9 +3,9 @@ package order
 import (
 	"context"
 	"encoding/json"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
 	"net/url"
-	"openapi-sdk-go/sdk/common"
 )
 
 // orderPlaceNewPurchaseOrderApi 通用订购接口

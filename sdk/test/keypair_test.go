@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"testing"
 
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/keypair"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/keypair"
 )
 
 func TestKeypaireCreateApi_Do(t *testing.T) {

@@ -3,8 +3,8 @@ package test
 import (
 	"context"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/security_group"
 	"io"
-	"openapi-sdk-go/sdk/security_group"
 	"testing"
 )
 

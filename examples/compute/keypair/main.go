@@ -5,15 +5,15 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/keypair"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/keypair"
 )
 
 func keypairDetail(ak, sk, regionID, keyPairName string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -35,7 +35,7 @@ func keypairDetail(ak, sk, regionID, keyPairName string) {
 func keypairDelete(ak, sk, regionID, keyPairName string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -57,7 +57,7 @@ func keypairDelete(ak, sk, regionID, keyPairName string) {
 func keypairImport(ak, sk, regionID, keyPairName, publicKey string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -79,7 +79,7 @@ func keypairImport(ak, sk, regionID, keyPairName, publicKey string) {
 func keypairAttach(ak, sk, regionID, keyPairName, instanceID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
@@ -102,7 +102,7 @@ func keypairAttach(ak, sk, regionID, keyPairName, instanceID string) {
 func keypairDetach(ak, sk, regionID, keyPairName, instanceID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtEcsEndPoint: "https://ctecs-global.ctapi.ctyun.cn",
+		CtEcsEndPoint: "ctecs-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)

@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/region"
 	"io"
-	"openapi-sdk-go/sdk/region"
 	"testing"
 )
 

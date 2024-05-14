@@ -2,8 +2,8 @@ package security_group
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // securityGroupDeleteApi 查询用户安全组详情

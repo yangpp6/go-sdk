@@ -3,16 +3,16 @@ package main
 import (
 	"context"
 	"flag"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/security_group_rule"
 	"log"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/security_group_rule"
 )
 
 func securityGroupRuleOperation(ak, sk, regionID, securityGroupID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtVpcEndPoint: "ctvpc-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)

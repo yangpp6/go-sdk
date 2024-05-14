@@ -3,8 +3,8 @@ package test
 import (
 	"context"
 	"fmt"
+	"github.com/yangpp6/go-sdk/sdk/ecs"
 	"io"
-	"openapi-sdk-go/sdk/ecs"
 	"testing"
 )
 

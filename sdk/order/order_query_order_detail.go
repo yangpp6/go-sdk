@@ -2,8 +2,8 @@ package order
 
 import (
 	"context"
+	"github.com/yangpp6/go-sdk/sdk/common"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
 )
 
 // orderQueryOrderDetailApi 通用订购接口

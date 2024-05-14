@@ -2,9 +2,9 @@ package test
 
 import (
 	"context"
-	"openapi-sdk-go/sdk"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/vpc"
+	"github.com/yangpp6/go-sdk/sdk"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/vpc"
 	"testing"
 )
 

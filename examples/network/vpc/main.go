@@ -3,16 +3,16 @@ package main
 import (
 	"context"
 	"flag"
+	"github.com/yangpp6/go-sdk/sdk/common"
+	"github.com/yangpp6/go-sdk/sdk/vpc"
 	"log"
 	"net/http"
-	"openapi-sdk-go/sdk/common"
-	"openapi-sdk-go/sdk/vpc"
 )
 
 func listVpcs(ak, sk, regionID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtVpcEndPoint: "ctvpc-global.ctapi.ctyun.cn",
 	}
 
 	handler := vpc.NewVpcListApi(client)
@@ -28,7 +28,7 @@ func listVpcs(ak, sk, regionID string) {
 func vpcOperation(ak, sk, regionID string) {
 	client := &common.CtyunSender{
 		Client:        &http.Client{},
-		CtVpcEndPoint: "https://ctvpc-global.ctapi.ctyun.cn",
+		CtVpcEndPoint: "ctvpc-global.ctapi.ctyun.cn",
 	}
 
 	credential, _ := common.NewCredential(ak, sk)
